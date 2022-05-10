@@ -9709,7 +9709,7 @@ TinCan client library
  * @fileoverview Global |this| required for resolving indexes in node.
  * @suppress {globalThis}
  */
-if (typeof module !== "undefined" && module.exports) {
+if (typeof module !== "undefined" && this.module !== module) {
   this["encoding-indexes"] =
     require("./encoding-indexes.js")["encoding-indexes"];
 }
